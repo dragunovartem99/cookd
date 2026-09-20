@@ -52,12 +52,10 @@
 		flex: 1;
 		min-width: 0;
 		padding: 0.45rem 0.6rem;
-		overflow: hidden;
 		border: 0;
 		background: none;
+		overflow-wrap: anywhere;
 		text-align: left;
-		text-overflow: ellipsis;
-		white-space: nowrap;
 	}
 
 	.empty {

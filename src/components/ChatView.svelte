@@ -43,12 +43,10 @@
 	h2 {
 		flex: 1;
 		margin: 0;
-		overflow: hidden;
 		font-size: 1rem;
 		font-weight: 500;
 		text-align: center;
-		text-overflow: ellipsis;
-		white-space: nowrap;
+		overflow-wrap: anywhere;
 	}
 
 	.error,
