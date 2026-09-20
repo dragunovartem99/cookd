@@ -1,0 +1,39 @@
+{
+	"name": "cookd",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "svelte-check --tsconfig ./tsconfig.app.json && vite build",
+		"dev": "vite",
+		"format": "oxfmt",
+		"format:check": "oxfmt --check",
+		"lint": "oxlint --fix",
+		"lint:check": "oxlint && node scripts/check-lines.ts",
+		"prepare": "husky",
+		"preview": "vite preview",
+		"test": "vitest run",
+		"test:coverage": "vitest run --coverage",
+		"types:check": "svelte-check --tsconfig ./tsconfig.app.json"
+	},
+	"dependencies": {
+		"@fontsource-variable/source-serif-4": "^5.3.0",
+		"dompurify": "^3.4.15",
+		"marked": "^18.0.13",
+		"svelte": "^5.57.1"
+	},
+	"devDependencies": {
+		"@dragunovartem99/oxfmt-config": "^2.1.0",
+		"@dragunovartem99/oxlint-config": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^7.3.0",
+		"@tsconfig/node24": "^24.0.5",
+		"@tsconfig/svelte": "^5.0.8",
+		"@types/node": "^26.6.2",
+		"@vitest/coverage-v8": "^5.0.1",
+		"husky": "^9.1.7",
+		"jsdom": "^30.1.0",
+		"svelte-check": "^4.7.6",
+		"typescript": "^6.0.3",
+		"vite": "^8.3.0",
+		"vitest": "^5.0.1"
+	}
+}
