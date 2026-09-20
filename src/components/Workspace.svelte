@@ -30,6 +30,7 @@
 	.shell {
 		display: grid;
 		grid-template-columns: 16rem minmax(0, 1fr) 20rem;
+		grid-template-rows: minmax(0, 1fr);
 		height: 100%;
 	}
 
