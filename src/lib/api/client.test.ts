@@ -63,7 +63,7 @@ describe("request failures", () => {
 		mockApi({ "GET /x": () => new Response("<html>bad gateway</html>", { status: 502 }) });
 		await expect(request("/x")).rejects.toMatchObject({
 			status: 502,
-			message: "Request failed (502)",
+			message: "Запрос не удался (502)",
 		});
 	});
 });

@@ -2,17 +2,17 @@
 	import { chat } from "@/lib/chat.svelte";
 
 	const starters = [
-		"What can I cook with what's in my pantry?",
-		"Something quick for tonight, under 20 minutes",
-		"Teach me one technique I'll use all the time",
+		"Что можно приготовить из моих запасов?",
+		"Что-нибудь быстрое на вечер, до 20 минут",
+		"Научи меня одному приёму, который пригодится всегда",
 	];
 </script>
 
 <div>
-	<h2>What are we cooking?</h2>
+	<h2>Что готовим?</h2>
 	<p>
-		Tell me what you have, or send a photo of your fridge. I know what's in your pantry and what you've
-		cooked before.
+		Расскажите, что у вас есть или чего хочется. После готовки пришлите фото блюда, и я разберу, что
+		получилось. Я знаю, что у вас в кладовой и что вы уже готовили.
 	</p>
 	<ul>
 		{#each starters as starter (starter)}

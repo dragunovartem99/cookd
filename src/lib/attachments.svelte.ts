@@ -14,12 +14,12 @@ export class Attachments {
 		const images = files.filter((f) => f.type.startsWith("image/"));
 		const picked = images.slice(0, MAX_PHOTOS - this.items.length);
 		if (picked.length < images.length)
-			this.problem = `At most ${MAX_PHOTOS} photos per message`;
+			this.problem = `Не больше ${MAX_PHOTOS} фото в одном сообщении`;
 
 		const results = await Promise.allSettled(picked.map((file) => prepareImage(file)));
 		for (const result of results) {
 			if (result.status === "fulfilled") this.items.push(result.value);
-			else this.problem = "Could not read that photo";
+			else this.problem = "Не удалось прочитать фото";
 		}
 	}
 

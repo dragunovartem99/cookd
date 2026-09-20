@@ -25,8 +25,7 @@
 <main>
 	<form onsubmit={submit}>
 		<h1>cookd</h1>
-		<p class="tagline">Your kitchen, remembered.</p>
-		<label class="label" for="password">Password</label>
+		<label class="label" for="password">Пароль</label>
 		<input
 			id="password"
 			class="input"
@@ -37,7 +36,7 @@
 		/>
 		{#if error}<p class="error" role="alert">{error}</p>{/if}
 		<button class="btn primary" disabled={busy || !password}>
-			{busy ? "Signing in…" : "Sign in"}
+			{busy ? "Входим…" : "Войти"}
 		</button>
 	</form>
 </main>
@@ -65,12 +64,6 @@
 		font-size: 2.4rem;
 		font-weight: 500;
 		letter-spacing: -0.02em;
-	}
-
-	.tagline {
-		margin: 0 0 1rem;
-		color: var(--muted);
-		font-style: italic;
 	}
 
 	.label {

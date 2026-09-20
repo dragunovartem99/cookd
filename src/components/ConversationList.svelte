@@ -10,7 +10,7 @@
 	}
 
 	async function remove(id: string, title: string) {
-		if (!confirm(`Delete “${title || "this chat"}” and its photos?`)) return;
+		if (!confirm(`Удалить «${title || "этот чат"}» вместе с фото?`)) return;
 		const wasActive = conversations.activeId === id;
 		await conversations.remove(id);
 		if (wasActive) await openConversation(null);
@@ -21,11 +21,11 @@
 <ul>
 	{#each conversations.list as c (c.id)}
 		<li class:active={c.id === conversations.activeId}>
-			<button class="title" onclick={() => pick(c.id)}>{c.title || "New conversation"}</button>
-			<button class="icon-btn" aria-label="Delete conversation" onclick={() => remove(c.id, c.title)}>×</button>
+			<button class="title" onclick={() => pick(c.id)}>{c.title || "Новый чат"}</button>
+			<button class="icon-btn" aria-label="Удалить чат" onclick={() => remove(c.id, c.title)}>×</button>
 		</li>
 	{:else}
-		<li class="empty">Nothing yet. Start a chat.</li>
+		<li class="empty">Пока пусто. Начните чат.</li>
 	{/each}
 </ul>
 

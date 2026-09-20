@@ -2,7 +2,7 @@
 	let { n }: { n: number } = $props();
 </script>
 
-<span class="stars" role="img" aria-label="{n} out of 5">
+<span class="stars" role="img" aria-label="{n} из 5">
 	{"★".repeat(n)}<span class="off">{"★".repeat(5 - n)}</span>
 </span>
 

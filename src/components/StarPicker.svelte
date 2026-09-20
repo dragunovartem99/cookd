@@ -3,13 +3,13 @@
 </script>
 
 <fieldset>
-	<legend class="label">How did it taste?</legend>
+	<legend class="label">Как получилось на вкус?</legend>
 	<div>
 		{#each [1, 2, 3, 4, 5] as n (n)}
 			<label class:on={n <= value}>
 				<input type="radio" name="taste" value={n} required bind:group={value} />
 				<span aria-hidden="true">★</span>
-				<span class="sr">{n} of 5</span>
+				<span class="sr">{n} из 5</span>
 			</label>
 		{/each}
 	</div>

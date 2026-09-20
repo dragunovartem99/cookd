@@ -12,10 +12,10 @@
 <li>
 	<div class="head">
 		<strong>{entry.dish}</strong>
-		<button class="icon-btn" aria-label="Delete {entry.dish}" onclick={() => journal.remove(entry.id)}>×</button>
+		<button class="icon-btn" aria-label="Удалить {entry.dish}" onclick={() => journal.remove(entry.id)}>×</button>
 	</div>
 	<p class="meta">
-		<Stars n={entry.taste} /> · {formatDay(entry.cookedOn)}{#if entry.minutes} · {entry.minutes} min{/if}
+		<Stars n={entry.taste} /> · {formatDay(entry.cookedOn)}{#if entry.minutes} · {entry.minutes} мин{/if}
 	</p>
 	{#if entry.note}<p class="note">{entry.note}</p>{/if}
 </li>

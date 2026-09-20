@@ -38,7 +38,10 @@ export async function send(path: string, { method = "GET", body, signal }: Optio
 		});
 	} catch (error) {
 		if (signal?.aborted) throw error;
-		throw new ApiError(0, "Can't reach the server. Check your connection and try again.");
+		throw new ApiError(
+			0,
+			"Не удаётся связаться с сервером. Проверьте соединение и попробуйте ещё раз."
+		);
 	}
 
 	if (!response.ok) {
@@ -46,7 +49,7 @@ export async function send(path: string, { method = "GET", body, signal }: Optio
 		if (response.status === 401 && session.token) session.end();
 		throw new ApiError(
 			response.status,
-			payload?.error ?? `Request failed (${response.status})`
+			payload?.error ?? `Запрос не удался (${response.status})`
 		);
 	}
 	return response;

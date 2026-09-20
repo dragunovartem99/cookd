@@ -24,12 +24,12 @@
 	<textarea
 		class="input"
 		rows="2"
-		placeholder="Add: eggs, rice, tomatoes"
-		aria-label="Ingredients to add"
+		placeholder="Добавить: яйца, рис, помидоры"
+		aria-label="Продукты для добавления"
 		bind:value={text}
 		{onkeydown}
 	></textarea>
-	<button class="btn primary" disabled={busy || !text.trim()}>Add</button>
+	<button class="btn primary" disabled={busy || !text.trim()}>Добавить</button>
 </form>
 
 <style>

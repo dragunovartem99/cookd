@@ -39,7 +39,7 @@ export async function prepareImage(file: File): Promise<Attachment> {
 	const blob = await new Promise<Blob | null>((done) => {
 		canvas.toBlob(done, "image/jpeg", 0.85);
 	});
-	if (!blob) throw new Error("Could not read that image");
+	if (!blob) throw new Error("Не удалось прочитать изображение");
 
 	return {
 		key: crypto.randomUUID(),

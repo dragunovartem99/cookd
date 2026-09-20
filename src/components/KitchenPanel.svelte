@@ -15,7 +15,7 @@
 			aria-selected={tab === "pantry"}
 			onclick={() => (tab = "pantry")}
 		>
-			Pantry <small>{pantry.inStock.length}</small>
+			Кладовая <small>{pantry.inStock.length}</small>
 		</button>
 		<button
 			class="tab"
@@ -23,7 +23,7 @@
 			aria-selected={tab === "journal"}
 			onclick={() => (tab = "journal")}
 		>
-			Journal
+			Дневник
 		</button>
 	</div>
 	<div class="body" role="tabpanel">

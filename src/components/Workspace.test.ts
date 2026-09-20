@@ -30,8 +30,8 @@ describe("Workspace", () => {
 		app = mount(Workspace, { target: document.body });
 
 		await vi.waitFor(() => expect(document.body.textContent).toContain("Omelette night"));
-		expect(document.body.textContent).toContain("In stock · 1");
-		expect(document.body.textContent).toContain("Out · 1");
+		expect(document.body.textContent).toContain("В наличии · 1");
+		expect(document.body.textContent).toContain("Закончилось · 1");
 	});
 
 	it("moves an ingredient to Out when its switch is flipped", async () => {
@@ -40,12 +40,12 @@ describe("Workspace", () => {
 			"PATCH /ingredients/1": () => json({ id: 1, name: "eggs", inStock: false }),
 		});
 		app = mount(Workspace, { target: document.body });
-		await vi.waitFor(() => expect(document.body.textContent).toContain("In stock · 1"));
+		await vi.waitFor(() => expect(document.body.textContent).toContain("В наличии · 1"));
 
 		document.querySelector<HTMLInputElement>("input[role=switch]")!.click();
 		await tick();
 
-		expect(document.body.textContent).toContain("Out · 2");
+		expect(document.body.textContent).toContain("Закончилось · 2");
 		await vi.waitFor(() =>
 			expect(fetchMock).toHaveBeenCalledWith(
 				expect.stringContaining("/ingredients/1"),

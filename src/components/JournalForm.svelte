@@ -29,16 +29,16 @@
 </script>
 
 <details bind:open>
-	<summary class="btn">Log a dish</summary>
+	<summary class="btn">Записать блюдо</summary>
 	<form onsubmit={submit}>
-		<input class="input" placeholder="What did you cook?" aria-label="Dish" required maxlength="100" bind:value={dish} />
+		<input class="input" placeholder="Что вы приготовили?" aria-label="Блюдо" required maxlength="100" bind:value={dish} />
 		<StarPicker bind:value={taste} />
 		<div class="row">
-			<input class="input" type="number" min="1" max="1440" placeholder="Minutes" aria-label="Minutes it took" bind:value={minutes} />
-			<input class="input" type="date" max={today()} aria-label="Date" required bind:value={cookedOn} />
+			<input class="input" type="number" min="1" max="1440" placeholder="Минуты" aria-label="Сколько минут заняло" bind:value={minutes} />
+			<input class="input" type="date" max={today()} aria-label="Дата" required bind:value={cookedOn} />
 		</div>
-		<textarea class="input" rows="2" maxlength="500" placeholder="Notes: too salty? use less next time?" aria-label="Notes" bind:value={note}></textarea>
-		<button class="btn primary" disabled={busy}>Save</button>
+		<textarea class="input" rows="2" maxlength="500" placeholder="Заметки: пересолено? в следующий раз меньше?" aria-label="Заметки" bind:value={note}></textarea>
+		<button class="btn primary" disabled={busy}>Сохранить</button>
 	</form>
 </details>
 

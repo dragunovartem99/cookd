@@ -19,7 +19,7 @@
 	{:else if message.text}
 		<div class="prose">{@html renderMarkdown(message.text)}</div>
 	{:else if streaming}
-		<p class="thinking">Thinking…</p>
+		<p class="thinking">Думаю…</p>
 	{/if}
 </article>
 

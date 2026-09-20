@@ -22,7 +22,7 @@
 <section bind:this={list} {onscroll}>
 	<div class="column">
 		{#if chat.loading}
-			<p class="hint">Loading…</p>
+			<p class="hint">Загрузка…</p>
 		{:else if chat.messages.length === 0}
 			<EmptyChat />
 		{/if}

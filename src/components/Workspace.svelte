@@ -23,7 +23,7 @@
 	<aside class="left"><Sidebar onpick={() => (drawer = "none")} /></aside>
 	<ChatView onmenu={() => (drawer = "left")} onkitchen={() => (drawer = "right")} />
 	<aside class="right"><KitchenPanel /></aside>
-	<button class="scrim" aria-label="Close panel" onclick={() => (drawer = "none")}></button>
+	<button class="scrim" aria-label="Закрыть панель" onclick={() => (drawer = "none")}></button>
 </div>
 
 <style>

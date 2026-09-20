@@ -55,7 +55,7 @@ describe("chat.send", () => {
 
 		await chat.send("a very long recipe", []);
 
-		expect(chat.notice).toBe("The answer was cut off.");
+		expect(chat.notice).toBe("Ответ был обрезан.");
 	});
 });
 

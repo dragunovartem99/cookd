@@ -8,15 +8,15 @@
 	let { onmenu, onkitchen }: { onmenu: () => void; onkitchen: () => void } = $props();
 
 	const title = $derived(
-		conversations.list.find((c) => c.id === conversations.activeId)?.title || "New conversation"
+		conversations.list.find((c) => c.id === conversations.activeId)?.title || "Новый чат"
 	);
 </script>
 
 <main>
 	<header>
-		<button class="btn" onclick={onmenu}>Chats</button>
+		<button class="btn" onclick={onmenu}>Чаты</button>
 		<h2>{title}</h2>
-		<button class="btn" onclick={onkitchen}>Kitchen</button>
+		<button class="btn" onclick={onkitchen}>Кухня</button>
 	</header>
 	<MessageList />
 	{#if chat.error}<p class="error" role="alert">{chat.error}</p>{/if}

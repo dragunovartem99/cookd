@@ -33,7 +33,7 @@ describe("Attachments", () => {
 		const photos = new Attachments();
 		await photos.add([photo("a.jpg"), photo("broken.jpg")]);
 		expect(photos.items).toHaveLength(1);
-		expect(photos.problem).toBe("Could not read that photo");
+		expect(photos.problem).toBe("Не удалось прочитать фото");
 	});
 
 	it("hands everything over on take", async () => {

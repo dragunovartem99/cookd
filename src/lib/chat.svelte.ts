@@ -82,7 +82,7 @@ class Chat {
 				else if (event.type === "error") throw new Error(event.error);
 				else {
 					conversations.touch(id, event.title);
-					if (event.stopReason === "max_tokens") this.notice = "The answer was cut off.";
+					if (event.stopReason === "max_tokens") this.notice = "Ответ был обрезан.";
 				}
 			}
 			return true;

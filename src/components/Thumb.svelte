@@ -19,9 +19,9 @@
 </script>
 
 <span class="thumb">
-	{#if src}<img {src} alt="Attached" />{/if}
+	{#if src}<img {src} alt="Вложение" />{/if}
 	{#if onremove}
-		<button class="remove" aria-label="Remove photo" onclick={onremove}>×</button>
+		<button class="remove" aria-label="Убрать фото" onclick={onremove}>×</button>
 	{/if}
 </span>
 

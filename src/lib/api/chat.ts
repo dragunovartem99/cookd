@@ -16,7 +16,7 @@ export async function* streamMessage(
 		body: message,
 		signal,
 	});
-	if (!response.body) throw new Error("The server sent no answer");
+	if (!response.body) throw new Error("Сервер не прислал ответ");
 
 	for await (const { event, data } of readEvents(response.body)) {
 		const payload = JSON.parse(data) as Record<string, unknown>;

@@ -10,8 +10,7 @@
 <ul>
 	{#each journal.entries as entry (entry.id)}<JournalEntryItem {entry} />{:else}
 		<li class="empty">
-			Nothing logged yet. After you cook, note how it tasted and how long it took. I'll remember for next
-			time.
+			Пока ничего не записано. После готовки отметьте, как получилось и сколько это заняло. Я запомню на будущее.
 		</li>
 	{/each}
 </ul>

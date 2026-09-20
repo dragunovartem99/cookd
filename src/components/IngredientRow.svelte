@@ -17,7 +17,7 @@
 		/>
 		<span>{item.name}</span>
 	</label>
-	<button class="icon-btn" aria-label="Remove {item.name}" onclick={() => pantry.remove(item)}>×</button>
+	<button class="icon-btn" aria-label="Убрать {item.name}" onclick={() => pantry.remove(item)}>×</button>
 </li>
 
 <style>

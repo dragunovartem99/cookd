@@ -49,7 +49,7 @@
 <form onsubmit={onsubmit}>
 	<AttachmentTray {photos} />
 	<div class="bar">
-		<button type="button" class="btn" onclick={() => picker?.click()}>Photo</button>
+		<button type="button" class="btn" onclick={() => picker?.click()}>Фото</button>
 		<input
 			bind:this={picker}
 			type="file"
@@ -61,15 +61,15 @@
 		<textarea
 			class="input"
 			rows="1"
-			placeholder="What's in the kitchen?"
+			placeholder="Что готовим?"
 			bind:value={text}
 			{onkeydown}
 			{onpaste}
 		></textarea>
 		{#if chat.busy}
-			<button type="button" class="btn" onclick={() => chat.stop()}>Stop</button>
+			<button type="button" class="btn" onclick={() => chat.stop()}>Стоп</button>
 		{:else}
-			<button class="btn primary" disabled={!canSend}>Send</button>
+			<button class="btn primary" disabled={!canSend}>Отправить</button>
 		{/if}
 	</div>
 </form>
