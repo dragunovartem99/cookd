@@ -14,9 +14,9 @@
 
 <nav>
 	<h1>cookd</h1>
-	<button class="btn primary" onclick={startNew}>New chat</button>
+	<button class="btn primary" onclick={startNew}>Новый чат</button>
 	<ConversationList {onpick} />
-	<button class="btn signout" onclick={() => session.end()}>Sign out</button>
+	<button class="btn signout" onclick={() => session.end()}>Выйти</button>
 </nav>
 
 <style>
