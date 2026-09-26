@@ -25,7 +25,8 @@ class Chat {
 	async open(id: string | null) {
 		this.stop();
 		this.messages = [];
-		this.error = this.notice = null;
+		this.error = null;
+		this.notice = null;
 		if (!id) return;
 
 		this.loading = true;
@@ -55,9 +56,11 @@ class Chat {
 	async send(text: string, attachments: Attachment[]): Promise<boolean> {
 		if (this.busy) return false;
 		this.busy = true;
-		this.error = this.notice = null;
+		this.error = null;
+		this.notice = null;
 		const before = this.messages.length;
-		const abort = (this.#abort = new AbortController());
+		const abort = new AbortController();
+		this.#abort = abort;
 
 		try {
 			const id = conversations.activeId ?? (await conversations.create());
