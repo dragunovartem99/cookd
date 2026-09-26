@@ -25,9 +25,9 @@ $ npm run dev      # talks to http://localhost:50001 (run cookd-api with `make r
 counted). oxlint applies it to TypeScript and to the `<script>` block of a component;
 `scripts/check-lines.ts` applies it to the whole `.svelte` file, markup and styles included.
 
-## Deploying
+## Deployment
 
-Pushing to `main` builds the site and publishes it to GitHub Pages through the shared
+Merging to `main` runs the same checks as pull requests, then builds the site and publishes it to GitHub Pages through the shared
 [pipes](https://github.com/dragunovartem99/pipes) workflow. Enable Pages once under
 Settings → Pages → Source: **GitHub Actions**.
 
