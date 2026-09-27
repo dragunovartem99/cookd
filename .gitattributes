@@ -1,0 +1,4 @@
+*.test.ts linguist-vendored
+src/test-utils.ts linguist-vendored
+/*.config.ts linguist-vendored
+scripts/** linguist-vendored
