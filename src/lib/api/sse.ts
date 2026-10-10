@@ -17,7 +17,6 @@ export function parseBlock(block: string): SseEvent | null {
 // Reads a Server-Sent Events body. fetch is used instead of EventSource because
 // EventSource cannot send the Authorization header. A chunk can end anywhere,
 // mid-line or mid-character, so text is buffered until a whole block arrives.
-//
 export async function* readEvents(body: ReadableStream<Uint8Array>): AsyncGenerator<SseEvent> {
 	const reader = body.getReader();
 	const decoder = new TextDecoder();
