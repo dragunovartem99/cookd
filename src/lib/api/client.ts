@@ -22,7 +22,6 @@ interface Options {
 // Calls the API with the session token and returns the raw response, so a
 // caller can stream it. Anything but a 2xx becomes an ApiError carrying the
 // server's own message; a 401 while signed in means the session is over.
-//
 export async function send(path: string, { method = "GET", body, signal }: Options = {}) {
 	const headers: Record<string, string> = {};
 	if (session.token) headers.Authorization = `Bearer ${session.token}`;

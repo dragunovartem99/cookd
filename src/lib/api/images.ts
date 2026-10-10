@@ -5,7 +5,6 @@ const cache = new Map<number, Promise<string>>();
 // Photos are private, so an <img src> cannot fetch them (it can't send the
 // token). They are fetched with it and shown from an object URL instead; a
 // photo never changes, so one fetch per id is enough.
-//
 export function imageUrl(id: number): Promise<string> {
 	let url = cache.get(id);
 	if (!url) {

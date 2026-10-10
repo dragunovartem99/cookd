@@ -5,7 +5,6 @@ import type { ChatEvent, UploadImage } from "./types";
 // Sends a message and yields the answer as it is written. The server stores the
 // exchange only after a complete answer, so an "error" event or an abort leaves
 // the conversation as it was.
-//
 export async function* streamMessage(
 	conversationId: string,
 	message: { text: string; images: UploadImage[] },
