@@ -25,7 +25,7 @@
 		"@dragunovartem99/oxfmt-config": "^2.1.0",
 		"@dragunovartem99/oxlint-config": "^3.1.0",
 		"@sveltejs/vite-plugin-svelte": "^7.3.0",
-		"@tsconfig/node24": "^24.0.5",
+		"@tsconfig/node26": "^26.0.0",
 		"@tsconfig/svelte": "^5.0.8",
 		"@types/node": "^26.6.2",
 		"@vitest/coverage-v8": "^5.0.1",
